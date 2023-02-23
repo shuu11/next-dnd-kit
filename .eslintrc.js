@@ -11,8 +11,6 @@ module.exports = {
 		'plugin:import/typescript',
 	],
 
-	plugins: ['prettier'],
-
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 		'import/order': [
