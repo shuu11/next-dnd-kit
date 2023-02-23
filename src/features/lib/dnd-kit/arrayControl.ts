@@ -7,15 +7,15 @@ export function removeCardIndex<T extends StateDnd>(item: T, id: string): T {
 
 export function insertCardIndex<T extends StateDnd>(
 	item: T,
-	oldCard: StateDndCard,
-	newIndex: number,
+	dragCard: StateDndCard,
+	overIndex: number,
 ): T {
 	return {
 		...item,
-		dndCard: [...item.dndCard.slice(0, newIndex), oldCard, ...item.dndCard.slice(newIndex)],
+		dndCard: [...item.dndCard.slice(0, overIndex), dragCard, ...item.dndCard.slice(overIndex)],
 	}
 }
 
-export function moveCard<T extends StateDnd>(item: T, oldIndex: number, newIndex: number): T {
-	return { ...item, dndCard: arrayMove(item.dndCard, oldIndex, newIndex) }
+export function moveCard<T extends StateDnd>(item: T, dragIndex: number, overIndex: number): T {
+	return { ...item, dndCard: arrayMove(item.dndCard, dragIndex, overIndex) }
 }
