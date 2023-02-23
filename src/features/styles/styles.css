@@ -112,9 +112,3 @@ body {
 	overflow: visible;
 	fill: #919eab;
 }
-
-.dragging-react-sortable-hoc {
-	pointer-events: 'auto';
-	cursor: 'grabbing';
-	background-color: #b1bed5;
-}
