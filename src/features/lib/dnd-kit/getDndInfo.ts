@@ -1,6 +1,6 @@
 import type { UniqueIdentifier } from '@dnd-kit/core'
-import type { StateDnd } from '@s/recoil/stateDnd'
 import type { StateActiveDndCard } from '@s/recoil/stateActiveDndCard'
+import type { StateDnd } from '@s/recoil/stateDnd'
 
 type Prop = {
 	items: StateDnd[]

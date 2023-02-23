@@ -10,10 +10,10 @@ import { closestCorners, KeyboardSensor, PointerSensor, useSensor, useSensors } 
 import { sortableKeyboardCoordinates } from '@dnd-kit/sortable'
 
 import { useRecoilState } from 'recoil'
+import { removeCardIndex, insertCardIndex, moveCard } from '@f/lib/dnd-kit/arrayControl'
 import { getDndInfo } from '@f/lib/dnd-kit/getDndInfo'
 import { stateActiveDndCard } from '@s/recoil/stateActiveDndCard'
 import { stateDnd } from '@s/recoil/stateDnd'
-import { removeCardIndex, insertCardIndex, moveCard } from '@f/lib/dnd-kit/arrayControl'
 
 type DndContextProps = {
 	sensors: SensorDescriptor<SensorOptions>[]

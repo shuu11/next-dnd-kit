@@ -1,7 +1,7 @@
 import { useRecoilState } from 'recoil'
 import { useMySortable } from '@f/hooks/dnd-kit/useMyDndSortable'
-import type { StateDndCard } from '@s/recoil/stateDnd'
 import { stateActiveDndCard } from '@s/recoil/stateActiveDndCard'
+import type { StateDndCard } from '@s/recoil/stateDnd'
 
 type Prop = {
 	card: StateDndCard
