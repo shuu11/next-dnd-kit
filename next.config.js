@@ -27,6 +27,7 @@ const nextConfig = withInterceptStdout(
 	},
 	// recoil使用時のエラーメッセージ回避
 	(text) => (text.includes('Duplicate atom key') ? '' : text),
+	(text) => (text.includes('The `app` directory is experimental') ? '' : text),
 )
 
 module.exports = nextConfig

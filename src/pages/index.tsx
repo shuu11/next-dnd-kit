@@ -1,4 +1,4 @@
-import DndWrapper from '@c/elements/dnd-kit/dndWrapper'
+import DndWrapper from '@a/components/elements/dndWrapper'
 
 export default function Index() {
 	return (

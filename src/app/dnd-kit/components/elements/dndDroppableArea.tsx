@@ -2,7 +2,7 @@ import { rectSortingStrategy, SortableContext } from '@dnd-kit/sortable'
 
 import { useRecoilState } from 'recoil'
 import SortableList from './dndSortableList'
-import { useMyDroppable } from '@f/hooks/dnd-kit/useMyDndDroppable'
+import { useMyDroppable } from '@a/features/hooks/useMyDndDroppable'
 import { stateDnd } from '@s/recoil/stateDnd'
 
 type Prop = {

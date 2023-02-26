@@ -1,6 +1,6 @@
 import { DndContext } from '@dnd-kit/core'
 import DndDroppableArea from './dndDroppableArea'
-import { useMyDndContext } from '@f/hooks/dnd-kit/useMyDndContext'
+import { useMyDndContext } from '@a/features/hooks/useMyDndContext'
 
 export default function DndWrapper() {
 	const { dndContextProps } = useMyDndContext()

@@ -10,8 +10,8 @@ import { closestCorners, KeyboardSensor, PointerSensor, useSensor, useSensors } 
 import { sortableKeyboardCoordinates } from '@dnd-kit/sortable'
 
 import { useRecoilState } from 'recoil'
-import { removeCardIndex, insertCardIndex, moveCard } from '@f/lib/dnd-kit/arrayControl'
-import { getDndInfo } from '@f/lib/dnd-kit/getDndInfo'
+import { removeCardIndex, insertCardIndex, moveCard } from '@a/features/lib/arrayControl'
+import { getDndInfo } from '@a/features/lib/getDndInfo'
 import { stateActiveDndCard } from '@s/recoil/stateActiveDndCard'
 import { stateDnd } from '@s/recoil/stateDnd'
 

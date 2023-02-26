@@ -20,17 +20,11 @@
 		"incremental": false,
 		"baseUrl": "src",
 		"paths": {
-			"@c/*": [
-				"components/*"
-			],
-			"@f/*": [
-				"features/*"
+			"@a/*": [
+				"app/dnd-kit/*"
 			],
 			"@s/*": [
 				"state/*"
-			],
-			"@t/*": [
-				"types/*"
 			],
 		}
 	},

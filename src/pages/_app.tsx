@@ -1,10 +1,10 @@
 import 'windi.css' // eslint-disable-line import/no-unresolved
-import '@f/styles/styles.css'
+import 'styles/styles.css'
 // import { Roboto, Lora, Inter, Kenia, Dancing_Script } from '@next/font/google'
 import type { AppProps } from 'next/app'
 import { RecoilRoot } from 'recoil'
 import { SWRConfig } from 'swr'
-import { fetcher } from '@f/lib/fetcher'
+import { fetcher } from 'lib/fetcher'
 
 // font
 // const roboto_normal = Roboto({ weight: '400', subsets: ['latin'] })
