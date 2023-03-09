@@ -1,6 +1,6 @@
 import { rectSortingStrategy, SortableContext } from '@dnd-kit/sortable'
 
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 import SortableList from './dndSortableList'
 import { useMyDroppable } from '@a/features/hooks/useMyDndDroppable'
 import { stateDnd } from '@s/recoil/stateDnd'
@@ -12,7 +12,7 @@ type Prop = {
 export default function DndDroppableArea(prop: Prop) {
 	const { dndArea } = prop
 
-	const [items] = useRecoilState(stateDnd)
+	const items = useRecoilValue(stateDnd)
 
 	const { droppableProps } = useMyDroppable(dndArea)
 

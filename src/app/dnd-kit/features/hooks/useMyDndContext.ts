@@ -9,7 +9,7 @@ import type {
 import { closestCorners, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core'
 import { sortableKeyboardCoordinates } from '@dnd-kit/sortable'
 
-import { useRecoilState } from 'recoil'
+import { useRecoilState, useSetRecoilState } from 'recoil'
 import { removeCardIndex, insertCardIndex, moveCard } from '@a/features/lib/arrayControl'
 import { getDndInfo } from '@a/features/lib/getDndInfo'
 import { stateActiveDndId } from '@s/recoil/stateActiveDndId'
@@ -31,7 +31,7 @@ type RetType = {
 
 export const useMyDndContext = (): RetType => {
 	const [items, setItems] = useRecoilState(stateDnd)
-	const [, setActiveCard] = useRecoilState(stateActiveDndId)
+	const setActiveCard = useSetRecoilState(stateActiveDndId)
 
 	/**
 	 * sensors

@@ -1,4 +1,4 @@
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 import { useMySortable } from '@a/features/hooks/useMyDndSortable'
 import { stateActiveDndId } from '@s/recoil/stateActiveDndId'
 import type { StateDndCard } from '@s/recoil/stateDnd'
@@ -13,7 +13,7 @@ export default function DndSortableList(prop: Prop) {
 
 	const { sortableProp } = useMySortable(uuid)
 
-	const [activeId] = useRecoilState(stateActiveDndId)
+	const activeId = useRecoilValue(stateActiveDndId)
 
 	const className = activeId === uuid ? 'sortable-item dragging-dbd-kit' : 'sortable-item'
 
