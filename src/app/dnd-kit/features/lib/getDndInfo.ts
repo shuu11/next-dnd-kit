@@ -1,13 +1,20 @@
 import type { UniqueIdentifier } from '@dnd-kit/core'
-import type { StateActiveDndCard } from '@s/recoil/stateActiveDndCard'
-import type { StateDnd } from '@s/recoil/stateDnd'
+import type { StateDndCard, StateDnd } from '@s/recoil/stateDnd'
 
 type Prop = {
 	items: StateDnd[]
 	id?: UniqueIdentifier
 }
 
-type RetType = StateActiveDndCard
+type RetType = {
+	index: number
+	area: string
+	cardIndex: number
+	card: StateDndCard
+	cardId: string
+	cardName: string
+	isLastCard: boolean
+}
 
 export function getDndInfo(prop: Prop): RetType | undefined {
 	const { items, id } = prop

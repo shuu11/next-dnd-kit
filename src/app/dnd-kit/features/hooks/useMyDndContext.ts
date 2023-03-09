@@ -12,7 +12,7 @@ import { sortableKeyboardCoordinates } from '@dnd-kit/sortable'
 import { useRecoilState } from 'recoil'
 import { removeCardIndex, insertCardIndex, moveCard } from '@a/features/lib/arrayControl'
 import { getDndInfo } from '@a/features/lib/getDndInfo'
-import { stateActiveDndCard } from '@s/recoil/stateActiveDndCard'
+import { stateActiveDndId } from '@s/recoil/stateActiveDndId'
 import { stateDnd } from '@s/recoil/stateDnd'
 
 type DndContextProps = {
@@ -31,7 +31,7 @@ type RetType = {
 
 export const useMyDndContext = (): RetType => {
 	const [items, setItems] = useRecoilState(stateDnd)
-	const [, setActiveCard] = useRecoilState(stateActiveDndCard)
+	const [, setActiveCard] = useRecoilState(stateActiveDndId)
 
 	/**
 	 * sensors
@@ -53,7 +53,7 @@ export const useMyDndContext = (): RetType => {
 
 		if (!dragDndInfo || dragDndInfo.isLastCard) return
 
-		setActiveCard(dragDndInfo)
+		setActiveCard(dragDndInfo.cardId)
 	}
 
 	/**

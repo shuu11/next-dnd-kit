@@ -2,6 +2,9 @@
 
 const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 const withInterceptStdout = require('next-intercept-stdout')
+
+const ignoreComments = ['Duplicate atom key', 'The `app` directory is experimental.']
+
 const urlPrefix = '.'
 
 const nextConfig = withInterceptStdout(
@@ -25,9 +28,7 @@ const nextConfig = withInterceptStdout(
 		// 	appDir: true,
 		// },
 	},
-	// recoil使用時のエラーメッセージ回避
-	(text) => (text.includes('Duplicate atom key') ? '' : text),
-	(text) => (text.includes('The `app` directory is experimental') ? '' : text),
+	(text) => (ignoreComments.some((comment) => text.includes(comment)) ? '' : text),
 )
 
 module.exports = nextConfig
