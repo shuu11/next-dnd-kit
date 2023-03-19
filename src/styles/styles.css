@@ -1,0 +1,36 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	table-layout: fixed;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+ul {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+
+	color: inherit;
+	transition: all 0.25s;
+}
+
+button {
+	display: block;
+
+	color: inherit;
+	transition: all 0.25s;
+}
